@@ -1,0 +1,15 @@
+{
+	"messages": [
+		"Removing {0}",
+		"Failed to remove cache file {0}",
+		"CMake Debugger",
+		"This version of CMake does not support the \"toolchains\" object kind. Compiler paths will be determined by reading CMakeCache.txt."
+	],
+	"keys": [
+		"removing",
+		"unlink.failed",
+		"cmake.debug.name",
+		"toolchains.object.unsupported"
+	],
+	"filePath": "src\\drivers\\cmakeFileApiDriver"
+}
