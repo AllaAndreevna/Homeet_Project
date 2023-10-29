@@ -46,15 +46,48 @@
                         <input class="form__input" placeholder=" ">
                         <label id="name" name="name" class="form__label" placeholder="Имя и фамилия">Курс</label>
                     </div>
-                    
+
                     <div class="form__group">
                         <input name="tg" class="form__input" placeholder=" ">
                         <label class="form__label" placeholder="Телеграм">Ступень образования</label>
                     </div>
-                    <div class="form__group">
+                    <div class = "dropdown">
+                        <!-- <div class = "notes_for_forms">Факультет</div> -->
+                
+                        <div class = "select">
+                            <span class = "selected">Факультет</span>
+                            <div class = "caret"></div>
+                        </div>
+                        <ul class = "menu">
+                            <li class = "active">Московский институт электроники и математики им.А.Н.Тихонова</li>
+                            <li>Факультет математики</li>
+                            <li>Факультет экономических наук</li>
+                            <li>Факультет компьютерных наук</li>
+                            <li>Высшая школа бизнеса</li>
+                            <li>Факультет права</li>
+                            <li>Высшая школа юриспруденции и администрирования</li>
+                            <li>Факультет гуманитарных наук</li>
+                            <li>Факультет социальных наук</li>
+                            <li>Факультет креативных индустрий</li>
+                            <li>Факультет мировой экономики и мировой политики</li>
+                            <li>Факультет физики</li>
+                            <li>Международный институт экономики и финансов </li>
+                            <li>Факультет городского и регионального развития</li>
+                            <li>Факультет химии</li>
+                            <li>Факультет биологии и биотехнологии</li>
+                            <li>Факультет географии и геоинформационных технологий</li>
+                            <li>Школа иностранных языков</li>
+                            <li>Институт статистических исследований и экономики знаний</li>
+                            <li>Бмнковский институт</li>
+                            <li>Школа инноватики и предпринимательства</li>
+        
+                        </ul>
+                    </div>
+                    
+                    <!-- <div class="form__group">
                         <input name="nom_tel" class="form__input" placeholder=" ">
                         <label class="form__label" placeholder="Номер телефона">Факультет</label>
-                    </div>
+                    </div> -->
                     <div class="form__group">
                         <input name="osebe" class="form__input" placeholder=" ">
                         <label class="form__label" placeholder="О себе">Образовательная программа</label>
@@ -63,7 +96,7 @@
                         <input name="osebe" class="form__input" placeholder=" ">
                         <label class="form__label" placeholder="О себе">Работа</label>
                     </div>
-                    
+
 
                 </form>
             </div>
@@ -76,16 +109,18 @@
                         <!-- <button class="shrift" class = "pokaz_k">Показать контакты</button> -->
                         <label class="file-input_1" style="margin: 0 0 0 15px">Показать контакты</label>
                     </div>
-
-                    <div id="right_side_2" class="page_block" class="block">
-                        <h1 style="font-size: 25px;" class="shrift">Саша Фефелов</h1>
-                        <div class="osebe">
-                            Парень
-                            <img src=".\img\Ellipse 14.svg">
-                            21
-                            год
-                            <p class="osebe">Мне очень нравится устраивать вечеринки, дебоширить и мазать с...</p>
+                    <div class="one_row">
+                        <div id="right_side_2">
+                            <p style="font-size: 25px;" class="shrift">Саша Фефелов</p>
+                            <div class="osebe">
+                                Парень
+                                <img src=".\img\Ellipse 14.svg">
+                                21
+                                год
+                                <p class="osebe">Мне очень нравится устраивать вечеринки, дебоширить и мазать с...</p>
+                            </div>
                         </div>
+                        <div class="info_in_grey"></div>
                     </div>
                 </div>
 
@@ -95,18 +130,17 @@
                         <div class="rask_osebe">Часто студенты ищут соседей по схожим интересам</div>
                     </div>
 
-                    <div><img src=".\img\292227702065211.png" alt="happy face" height="90px"
-                            width="90px">
+                    <div><img src=".\img\292227702065211.png" alt="happy face" height="90px" width="90px">
                     </div>
 
                 </section>
             </div>
         </section>
-        <button onClick="submit()" class="form__button" class = "form__button_page_2">Продолжить</button>
+        <button onClick="submit()" class="form__button" class="form__button_page_2">Продолжить</button>
     </div>
 
     <!-- <script src=".\js\script_1.js"></script> -->
-    
+
 
 </body>
 
@@ -116,7 +150,7 @@
 
 
 
-
+<div class="line_b"></div>
 
 
 <footer class="footer">
@@ -132,14 +166,17 @@
         <div class="social-icons">
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="#" class="nav-link"><i class="fab fa-telegram"></i></a>
+                    <a href="https://t.me/homeetHSE" class="nav-link"><i class="fab fa-telegram"></i></a>
+                    <img src="src\img\tg.svg" alt="telegram">
                 </li>
+               
                 <li class="nav-item">
-                    <a href="#" class="nav-link"><i class="fab fa-vk"></i></a>
+                    <a href="https://vk.com/ruhomeet" class="nav-link"><i class="fab fa-vk"></i></a>
+                    <img scr=".\img\vk.svg" alt="vk">
                 </li>
-                <!-- <img src=".\img\tg.svg" alt="telegram">
-                <a class="social-icon-telegram" href="https://t.me/homeetHSE" title="TG" target="_blank"
-                        rel="noopener"></a></li> -->
+
+                <!-- <a class="social-icon-telegram" href="https://t.me/homeetHSE" title="TG" target="_blank"
+                    rel="noopener"></a></li> -->
 
             </ul>
             <!-- <div>
@@ -156,8 +193,8 @@
         достоверность информации и т.д.</h>
     <h id="podpol">Сделано в бвср</h>
 
-    
+
 </footer>
-<div style = "height: 12px; background-color: #7953C3;"></div>
+<div style="height: 12px; background-color: #7953C3;"></div>
 
 </html>
