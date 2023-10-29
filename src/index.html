@@ -51,11 +51,11 @@
                         </div>
                         <div id="pol">
                             <div id="same_line">
-                                <input class="custom-radio" type="radio" name="gender" value="male" class="shrift">
+                                <input id = "paren" class="custom-radio" type="radio" name="gender" value="Парень" class="shrift">
                                 <label for="male">Парень</label>
                             </div>
                             <div id="same_line_1">
-                                <input type="radio" name="gender" value="female" class="shrift">
+                                <input id = "devushka" type="radio" name="gender" value="Девушка" class="shrift">
                                 <label for="female">Девушка</label>
                             </div>
 
@@ -63,8 +63,9 @@
 
 
                         <!-- <input name="date_of_birth" type="date" class="calend"  placeholder= "Дата рождения"; /> -->
-                        <input required="" name="date_of_birth" type="text" class="calend" placeholder="Дата рождения"
+                        <input id = "date-input" required="" name="date_of_birth" type="text" class="calend" placeholder="Дата рождения"
                             onfocus="(this.type='date')" />
+                            <button onclick="ageCalculate()">Calculate</button>
 
                         <div class="form__group">
                             <label class="form__label" placeholder="Телеграм">Телеграм
@@ -92,7 +93,7 @@
                             </p>
                         </div>
                         <!-- <input type="submit" value="submit" name="submit" /> -->
-                        <button onclick="myFunction()" class="form__button">Продолжить </button>
+                        <button onclick="myFunction()"  class="form__button">Продолжить </button>
                         <!-- <button onclick="myFunction()"> submit </button> -->
                     </form>
 
@@ -111,10 +112,11 @@
                     <div id="right_side_2" class="page_block" class="block">
                         <h1 id="users_added_name" style="font-size: 25px;" class="shrift"> </h1>
                         <div class="osebe">
-                            Парень
+                            <h1 id = "users_added_gender"> </h1>
+                            <h1 id = "years"> </h1>
                             <h1 id="users_nom_tel"> </h1>
                             <!-- <img src=".\img\Ellipse 14.svg"> -->
-                            <p class="osebe">Мне очень нравится устраивать вечеринки, дебоширить и мазать с...</p>
+                            <p id = "users_added_info" class="osebe" > </p>
                         </div>
                     </div>
                 </div>
