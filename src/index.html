@@ -7,7 +7,8 @@
     <title>Homeet</title>
     <link rel="icon" href=".\img\icon_homeet.PNG" type="image/x-icon">
     <link type="text/css" rel="stylesheet" href=".\css\style.css">
-    <script defer src=".\js\script_1.js"></script>
+    <!-- <script src="js\script_1.js"></script> -->
+
 </head>
 
 <body>
@@ -39,50 +40,63 @@
                     </div>
                     <p class="osebe" id="shrift_zagruz_ph">Загрузите фотографию весом не более 10 мб</p>
                 </div>
-                <form class="form">
-                    <div class="form__group">
-                        <input class="form__input" placeholder=" ">
-                        <label id="name" name="name" class="form__label" placeholder="Имя и фамилия">Имя и
-                            фамилия</label>
-                    </div>
-                    <div id="pol">
-                        <div id="same_line">
-                            <input type="radio" name="gender" value="male" class="shrift">
-                            <label for="male">Парень</label>
+                <div class="wrapper">
+                    <form class="form">
+                        <div class="form__group">
+                            <label class="form__label" placeholder="Имя и фамилия">Имя и
+                                фамилия
+                                <input id="name" type="text" name="name" class="form__input" placeholder="Имя и фамилия"
+                                    required />
+                            </label>
                         </div>
-                        <div id="same_line_1">
-                            <input type="radio" name="gender" value="female" class="shrift">
-                            <label for="female">Девушка</label>
+                        <div id="pol">
+                            <div id="same_line">
+                                <input class="custom-radio" type="radio" name="gender" value="male" class="shrift">
+                                <label for="male">Парень</label>
+                            </div>
+                            <div id="same_line_1">
+                                <input type="radio" name="gender" value="female" class="shrift">
+                                <label for="female">Девушка</label>
+                            </div>
+
                         </div>
 
-                    </div>
 
+                        <!-- <input name="date_of_birth" type="date" class="calend"  placeholder= "Дата рождения"; /> -->
+                        <input required="" name="date_of_birth" type="text" class="calend" placeholder="Дата рождения"
+                            onfocus="(this.type='date')" />
 
-                    <input name="date_of_birth" type="date" class="calend" />
+                        <div class="form__group">
+                            <label class="form__label" placeholder="Телеграм">Телеграм
+                                <input id="tg" name="tg" class="form__input" placeholder="Телеграм" required />
+                            </label>
 
+                        </div>
+                        <div class="form__group">
+                            <label class="form__label" placeholder="Номер телефона">Номер телефона
+                                <input id="nom_tel" name="nom_tel" class="form__input" placeholder="Номер телефона"
+                                    required />
+                            </label>
+                        </div>
+                        <div class="form__group">
+                            <label class="form__label" placeholder="О себе">О себе</label>
+                            <input id="osebe" type="text" name="osebe" class="form__input" placeholder="О себе">
+                        </div>
+                        <div id="info" class="ottst">
+                            <p><label name="info" for="comment" class="osebe">Например: Редко готовлю, но люблю ботать
+                                    на
+                                    кухне по ночам.
+                                    Хочу завести собаку. Очень люблю читать, играть в хорроры и
+                                    смотреть аниме. Открыт к общению и взаимопомощи
+                                    :)</label>
+                            </p>
+                        </div>
+                        <!-- <input type="submit" value="submit" name="submit" /> -->
+                        <button onclick="myFunction()" class="form__button">Продолжить </button>
+                        <!-- <button onclick="myFunction()"> submit </button> -->
+                    </form>
 
-                    <div class="form__group">
-                        <input name="tg" class="form__input" placeholder=" ">
-                        <label class="form__label" placeholder="Телеграм">Телеграм</label>
-                    </div>
-                    <div class="form__group">
-                        <input name="nom_tel" class="form__input" placeholder=" ">
-                        <label class="form__label" placeholder="Номер телефона">Номер телефона</label>
-                    </div>
-                    <div class="form__group">
-                        <input name="osebe" class="form__input" placeholder=" ">
-                        <label class="form__label" placeholder="О себе">О себе</label>
-                    </div>
-                    <div class="ottst">
-                        <p><label name="info" for="comment" class="osebe">Например: Редко готовлю, но люблю ботать на
-                                кухне по ночам.
-                                Хочу завести собаку. Очень люблю читать, играть в хорроры и
-                                смотреть аниме. Открыт к общению и взаимопомощи
-                                :)</label>
-                        </p>
-                    </div>
-
-                </form>
+                </div>
             </div>
             <div class="shir_2_bl">
                 <p class="tak_b_v">Так будет выглядеть твоя будущая страница</p>
@@ -95,12 +109,11 @@
                     </div>
 
                     <div id="right_side_2" class="page_block" class="block">
-                        <h1 style="font-size: 25px;" class="shrift">Саша Фефелов</h1>
+                        <h1 id="users_added_name" style="font-size: 25px;" class="shrift"> </h1>
                         <div class="osebe">
                             Парень
-                            <img src=".\img\Ellipse 14.svg">
-                            21
-                            год
+                            <h1 id="users_nom_tel"> </h1>
+                            <!-- <img src=".\img\Ellipse 14.svg"> -->
                             <p class="osebe">Мне очень нравится устраивать вечеринки, дебоширить и мазать с...</p>
                         </div>
                     </div>
@@ -120,20 +133,14 @@
                 </section>
             </div>
         </section>
-        <button onClick="submit()" class="form__button">Продолжить</button>
+        <!-- <input type="submit" value="submit" name="submit" /> -->
+        <!-- <button type="submit" value="submit" class="form__button">Продолжить</button> -->
     </div>
 
     <!-- <script src=".\js\script_1.js"></script> -->
-    <script>
 
-    </script>
-
+    <script src="js\script_1.js"></script>
 </body>
-
-
-
-
-
 
 
 
@@ -157,16 +164,7 @@
                 <li class="nav-item">
                     <a href="#" class="nav-link"><i class="fab fa-vk"></i></a>
                 </li>
-                <!-- <img src=".\img\tg.svg" alt="telegram">
-                <a class="social-icon-telegram" href="https://t.me/homeetHSE" title="TG" target="_blank"
-                        rel="noopener"></a></li> -->
-
             </ul>
-            <!-- <div>
-                <a class="social-icon-vk" href="https://vk.com/ruhomeet" title="VK" target="_blank" rel="noopener"></a>
-
-                <img src=".\img\vk.svg" alt="vk">
-            </div> -->
 
         </div>
     </div>
@@ -176,5 +174,6 @@
         достоверность информации и т.д.</h>
     <h id="podpol">Сделано в бвср</h>
 </footer>
-<div style = "height: 12px; background-color: #7953C3;"></div>
+<div style="height: 12px; background-color: #7953C3;"></div>
+
 </html>
