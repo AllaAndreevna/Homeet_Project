@@ -1,46 +1,3 @@
-// const form = document.getElementById('wrapper');
-
-// function retrieveFormValue(event) {
-//     event.preventDefault();
-
-//     const fields = document.querySelectorAll('name, gender, date_of_birth, tg, nom_tel, osebe, info');
-//     const values = {};
-
-//     fields.forEach(field => {
-//         const { name, value } = field;
-
-//         values[name] = value;
-
-//     });
-
-
-// try {
-//     text.addEventListener('click', () => {
-//         console.log('script_1', values);
-//     });
-// } catch (error) {
-//     console.log(error);
-
-//     console.log('script_1', values)
-// }
-// const form = document.getElementById('wrapper');
-
-// const form = document.getElementById('wrapper');
-
-// function retrieveFormValue(event) {
-//     event.preventDefault();
-
-//     const name = form.querySelector('[name = "name"]');
-//     const values = {
-//         name: name.value
-//     };
-//     console.log("script_1", values);
-// }
-// form.addEventListener('submit', retrieveFormValue);
-
-
-// form.addEventListener('submit', retrieveFormValue);
-
 // --------i'm still trying to get data 
 const wrapper = document.querySelector('.wrapper'),
     form = wrapper.querySelectorAll(".form"),
@@ -66,6 +23,85 @@ function myFunction() {
     users_nom_tel.innerHTML = nom_tel.value;
 
 
+    let osebe = document.querySelector("#osebe");
+    let users_added_info = document.querySelector("#users_added_info");
+    users_added_info.innerHTML = osebe.value;
+
+    var paren = document.getElementById('paren');
+    if (document.getElementById('paren').checked) {
+        users_added_gender.innerHTML = paren.value;
+    }
+    if (document.getElementById('devushka').checked) {
+        users_added_gender.innerHTML = devushka.value;
+    }
+    // document.getElementById("years").textContent = bYear;
+
+}
+
+//here i'm getting the age
+const months = [31,28,31,30,31,30,31,31,30,31,30,31];
+
+function ageCalculate(){
+    let today = new Date();
+    let inputDate = new Date(document.getElementById("date-input").value);
+    let birthMonth,birthDate,birthYear;
+    let birthDetails = {
+        date:inputDate.getDate(),
+        month:inputDate.getMonth()+1,
+        year:inputDate.getFullYear()
+    }
+    let currentYear = today.getFullYear();
+    let currentMonth = today.getMonth()+1;
+    let currentDate = today.getDate();
+
+    leapChecker(currentYear);
+
+    if(
+        birthDetails.year > currentYear ||
+        ( birthDetails.month > currentMonth && birthDetails.year == currentYear) || 
+        (birthDetails.date > currentDate && birthDetails.month == currentMonth && birthDetails.year == currentYear)
+    ){
+        alert("Not Born Yet");
+        displayResult("-","-","-");
+        return;
+    }
+
+    birthYear = currentYear - birthDetails.year;
+
+    if(currentMonth >= birthDetails.month){
+        birthMonth = currentMonth - birthDetails.month;
+    }
+    else{
+        birthYear--;
+        birthMonth = 12 + currentMonth - birthDetails.month;
+    }
+
+    if(currentDate >= birthDetails.date){
+        birthDate = currentDate - birthDetails.date;
+    }
+    else{
+        birthMonth--;
+        let days = months[currentMonth - 2];
+        birthDate = days + currentDate - birthDetails.date;
+        if(birthMonth < 0){
+            birthMonth = 11;
+            birthYear--;
+        }
+    }
+    displayResult(birthDate,birthMonth,birthYear);
+}
+
+function displayResult(bDate,bMonth,bYear){
+    document.getElementById("years").textContent = bYear;
+}
+
+function leapChecker(year){
+    if(year % 4 == 0 || (year % 100 == 0 && year % 400 == 0)){
+        months[1] = 29;
+    }
+    else{
+        months[1] = 28;
+    }
 }
 
 
@@ -98,3 +134,18 @@ dropdowns.forEach(dropdown => {
         });
     });
 });
+
+
+//styling fields
+formInputs.forEach(input) {
+    if (input.value == '') {
+        console.log('input empty')
+        input.classList.add('error');
+        let a = "#" + String(input.name) + 'empty'
+        //console.log(a)
+        document.querySelector(a).textContent = 'Обязательное поле'
+    }
+    else{
+        input.classList.remove('error')
+    }
+}
