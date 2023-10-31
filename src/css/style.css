@@ -222,6 +222,11 @@
 
 }
 
+.users_name_letters {
+    margin: 0 px;
+    font-family: Museo Sans Cyrl;
+}
+
 .color {
     color: white;
 }
@@ -343,6 +348,7 @@
     letter-spacing: 1px;
     font-size: 16px;
 }
+
 /* here i just tryed to pick my lovely button to the right side of my page */
 /* .form__button{
     margin : 0 0 0 0 104000px;
@@ -694,7 +700,7 @@ label {
     background: #F4F4F6;
 
     font-family: Museo Sans Cyrl;
-    color:#5D5B66;
+    color: #5D5B66;
     letter-spacing: 1px;
     font-size: 16px;
 
@@ -704,9 +710,11 @@ label {
 
 
 }
+
 ::-webkit-calendar-picker-indicator {
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="%23bbbbbb" d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/></svg>');
-  }
+}
+
 .ottst {
     margin: 0 0 0 14px;
     color: #9E9E9E;
@@ -858,6 +866,8 @@ label {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    line-height: 50%;
+
 }
 
 .page_block {
@@ -948,7 +958,7 @@ label {
     width: 984px;
     height: 24px;
     margin: 10px;
-    margin-bottom: 160px;
+    margin-bottom: 80px;
     flex-direction: column;
     display: flex;
     flex-direction: row;
@@ -961,6 +971,10 @@ label {
     letter-spacing: -0.16px;
     height: 24px;
     align-self: stretch;
+}
+
+.aoa {
+    margin: 800px 0 0 0;
 }
 
 .techn_p {
@@ -1261,4 +1275,92 @@ input[type='radio']:checked:after {
     display: inline-block;
     visibility: visible;
     /* border: 0.5px solid white; */
+}
+
+.telegrammm,
+.telegrammm i {
+    color: red;
+}
+
+.vkkk,
+.vkkk i {
+    color: black;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+}
+
+ul li {
+    list-style: none;
+    width: 80px;
+    margin: 0 10px;
+    line-height: 80px;
+    text-align: center;
+    border-radius: 50px;
+    font-size: 30px;
+    cursor: pointer;
+    /* box-shadow; */
+}
+
+.fill_in {
+    color: #040013;
+    gap: 8px;
+    font-family: Museo Sans Cyrl;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 11px;
+    letter-spacing: -0.16px;
+    /* margin: 50px; */
+    /* display: flex; */
+    display: inline;
+    flex-direction: row;
+    justify-content: left;
+    align-self: stretch;
+
+
+
+    font-size: 9px;
+    margin-left: 4px;
+    display: inline-block;
+    width: 374px;
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: row;
+}
+
+.empty_field_1 {
+    width: 120px;
+    height: 11px;
+    color: #EEEEF1;
+    border-radius: 4px;
+    background: var(--eeeef-1-filter-hover, #EEEEF1);
+    /* margin: 1px; */
+}
+
+.empty_field_2 {
+    width: 170px;
+    height: 17px;
+    color: #EEEEF1;
+    border-radius: 4px;
+    background: var(--eeeef-1-filter-hover, #EEEEF1);
+    margin: 0px;
+}
+
+.osebe_input {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+    font-family: Museo Sans Cyrl;
+    color: var(--5-d-5-b-66-secondary-black, #5D5B66);
+    font-family: Museo Sans Cyrl;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 11px;
+    /* 122.222% */
+    color: #5D5B66;
 }
