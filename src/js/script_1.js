@@ -22,7 +22,6 @@ function myFunction() {
     // let users_nom_tel = document.querySelector("#users_nom_tel");
     // users_nom_tel.innerHTML = nom_tel.value;
 
-
     let osebe = document.querySelector("#osebe");
     let users_added_info = document.querySelector("#users_added_info");
     users_added_info.innerHTML = osebe.value;
@@ -34,18 +33,59 @@ function myFunction() {
     if (document.getElementById('devushka').checked) {
         users_added_gender.innerHTML = devushka.value;
     }
-    
-
-
 
 }
+
+
+//here i'm taking a photo
+
+// const realFileBtn = document.getElementById("real-file");
+// const fileinputBtn = document.getElementById("file-input");
+// const customTxt = document.getElementById("custom-text");
+
+// customBtn.addEventListener("click", function(){
+//     realFileBtn.click();
+// });
+
+// realFileBtn.addEventListener("change", function() {
+//     if (realfileBtn.value) {
+//         customTxt.innerHTML = realFileBtn.value.match();
+//     } else {
+//         customTxt.innerHTML = "No file chosen yet";
+//     }
+// });
+
+function handleImageUpload() 
+{
+
+var image = document.getElementById("real-file").files[0];
+
+    var reader = new FileReader();
+
+    reader.onload = function(e) {
+      document.getElementById("display-image").src = e.target.result;
+    }
+
+    reader.readAsDataURL(image);
+
+} 
+
+// function readURL(input) {
+//     if (input.files && input.files[0]) {
+//         var reader = new FileReader();
+//         reader.onload = function (e) {
+//             $('#blah').attr('src', e.target.result).width(150).height(200);
+//         };
+//         reader.readAsDataURL(input.files[0]);
+//     }
+// }
 
 //here i'm getting the age
 
 function submitBday() {
     let Bdate = document.getElementById('date-input').value;
     let Bday = +new Date(Bdate);
-    let Q4A = ~~ ((Date.now() - Bday) / (31557600000)) + " лет";
+    let Q4A = ~~((Date.now() - Bday) / (31557600000)) + " лет";
     let theBday = document.getElementById('users_added_years');
     theBday.innerHTML = Q4A;
 }
@@ -81,17 +121,18 @@ dropdowns.forEach(dropdown => {
 });
 
 
-// //styling fields
-// formInputs.forEach(input) {
-//     if (input.value == '') {
-//         console.log('input empty')
-//         input.classList.add('error');
-//         let a = "#" + String(input.name) + 'empty'
-//         //console.log(a)
-//         document.querySelector(a).textContent = 'Обязательное поле'
-//     }
-//     else{
-//         input.classList.remove('error')
-//     }
-// }
+//styling fields
+formInputs.forEach(input)
+{
+    if (input.value == '') {
+        console.log('input empty');
+        input.classList.add('error');
+        let a = "#" + String(input.name) + 'empty';
+        console.log(a);
+        document.querySelector(a).textContent = 'Обязательное поле';
+    }
+    else {
+        input.classList.remove('error');
+    }
+}
 
