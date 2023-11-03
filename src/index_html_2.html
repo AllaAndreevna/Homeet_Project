@@ -7,10 +7,11 @@
     <title>Homeet</title>
     <link rel="icon" href=".\img\icon_homeet.PNG" type="image/x-icon">
     <link type="text/css" rel="stylesheet" href=".\css\style.css">
-    <script defer src=".\js\script_1.js"></script>
+    <script src="js\script_1.js"></script>
 </head>
 
 <body>
+    <script src="js\script_1.js"></script>
     <header class="otst_0">
         <img src=".\img\Слой 2.svg" alt="Logo">
         <button id="but1" class="v_is_akk" style="float:right">Выйти из аккаунта</button>
@@ -51,15 +52,25 @@
                         <input name="tg" class="form__input" placeholder=" ">
                         <label class="form__label" placeholder="Телеграм">Ступень образования</label>
                     </div>
-                    <div class = "dropdown">
-                        <!-- <div class = "notes_for_forms">Факультет</div> -->
-                
-                        <div class = "select">
-                            <span class = "selected">Факультет</span>
-                            <div class = "caret"></div>
+
+                    <div class="dropdown">
+                        <div class="select">
+                            <span class="selected">Ступень образования</span>
+                            <div class="caret"></div>
                         </div>
-                        <ul class = "menu">
-                            <li class = "active">Московский институт электроники и математики им.А.Н.Тихонова</li>
+                        <ul class="menu">
+                            <li class="active">Бакалавриат</li>
+                            <li>Специалитет</li>
+                            <li>Магистрант</li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <div class="select">
+                            <span class="selected">Факультет</span>
+                            <div class="caret"></div>
+                        </div>
+                        <ul class="menu">
+                            <li class="active">Московский институт электроники и математики им.А.Н.Тихонова</li>
                             <li>Факультет математики</li>
                             <li>Факультет экономических наук</li>
                             <li>Факультет компьютерных наук</li>
@@ -80,10 +91,10 @@
                             <li>Институт статистических исследований и экономики знаний</li>
                             <li>Бмнковский институт</li>
                             <li>Школа инноватики и предпринимательства</li>
-        
+
                         </ul>
                     </div>
-                    
+
                     <!-- <div class="form__group">
                         <input name="nom_tel" class="form__input" placeholder=" ">
                         <label class="form__label" placeholder="Номер телефона">Факультет</label>
@@ -109,18 +120,21 @@
                         <!-- <button class="shrift" class = "pokaz_k">Показать контакты</button> -->
                         <label class="file-input_1" style="margin: 0 0 0 15px">Показать контакты</label>
                     </div>
-                    <div class="one_row">
-                        <div id="right_side_2">
-                            <p style="font-size: 25px;" class="shrift">Саша Фефелов</p>
-                            <div class="osebe">
-                                Парень
-                                <img src=".\img\Ellipse 14.svg">
-                                21
-                                год
-                                <p class="osebe">Мне очень нравится устраивать вечеринки, дебоширить и мазать с...</p>
-                            </div>
+
+                    <div id="right_side_2" class="page_block" class="block">
+                        <h1 class="users_name_letters" id="users_added_name" style="font-size: 25px;" class="shrift">
+                        </h1>
+                        <div class="fill_in">
+                            <h1 id="users_added_gender"> </h1>
+                            <img src=".\img\Ellipse 14.svg">
+                            <h1 id="users_added_years"> </h1>
+                            <img src=".\img\Ellipse 14.svg">
+                            <h1 class="empty_field_1"> </h1>
                         </div>
-                        <div class="info_in_grey"></div>
+                        <!-- <p id="users_nom_tel" class = "osebe"> </p> -->
+                        <h1 class="empty_field_2"> </h1>
+                        <p id="users_added_info" class="osebe_input"> </p>
+
                     </div>
                 </div>
 
@@ -139,11 +153,10 @@
         <button onClick="submit()" class="form__button" class="form__button_page_2">Продолжить</button>
     </div>
 
-    <!-- <script src=".\js\script_1.js"></script> -->
-
-
+   
+    
+    <script src="js\script_1.js"></script>
 </body>
-
 
 
 
@@ -169,7 +182,7 @@
                     <a href="https://t.me/homeetHSE" class="nav-link"><i class="fab fa-telegram"></i></a>
                     <img src="src\img\tg.svg" alt="telegram">
                 </li>
-               
+
                 <li class="nav-item">
                     <a href="https://vk.com/ruhomeet" class="nav-link"><i class="fab fa-vk"></i></a>
                     <img scr=".\img\vk.svg" alt="vk">
