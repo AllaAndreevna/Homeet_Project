@@ -9,14 +9,14 @@
     box-shadow: 0px 1.13351px 4.29362px 0px rgba(133, 94, 152, 0.03), 0px 2.86674px 10.85888px 0px rgba(133, 94, 152, 0.04), 0px 5.84789px 22.15109px 0px rgba(133, 94, 152, 0.05), 0px 5.84789px 22.15109px 0px rgba(133, 94, 152, 0.05);
     /* margin: 1em auto; */
     padding: 1em;
-    width: 1440px;
+    width: 100%;
 }
 
 
 .shapka {
     /* width: 1040px;
     height: 58px; */
-    width: 434px;
+    width: 100%;
     height: 40px;
     margin: 16px 0px 0px 0px;
     /* display: ; */
@@ -111,9 +111,9 @@
 
 .main_body {
     margin: 64px 200px 260px 200px;
-    width: 1440px;
+    width: 100%;
     /* margin: 0 auto; */
-    /* display: center; */
+    display: center;
     justify-content: center;
     align-items: center;
     /* max-width: 75%; */
@@ -123,7 +123,7 @@
 
 
 .body {
-    width: 1440px;
+    width: 100%;
     height: 1895px;
     /* width: 100%;
     height: 100%; */
@@ -266,7 +266,45 @@
     background: var(--7953-c-3-purple-main, #7953C3);
     width: 144px;
     height: 36px;
+    color: white;
+    font-family: Museo Sans Cyrl;
+    cursor: pointer;
 
+
+
+}
+
+#file-input:hover {
+    background-color: #6B39CB;
+}
+
+#btncentr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--000-black, black);
+    text-align: center;
+
+    /* P bold */
+    font-family: Museo Sans Cyrl;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    /* 150% */
+    letter-spacing: -0.16px;
+    height: 200px;
+    width: 100%;
+}
+
+#custom_text {
+    margin-left: 10px;
+    font-family: Museo Sans Cyrl;
+    color: green;
 }
 
 .file-input_1 {
@@ -503,9 +541,6 @@
 
 #podpol {
     color: var(--, #AAA);
-
-    font-family: Museo Sans Cyrl;
-    /* Small */
     font-family: Museo Sans Cyrl;
     font-size: 14px;
     font-style: normal;
@@ -513,7 +548,7 @@
     line-height: 20px;
     letter-spacing: -0.14px;
     text-align: right;
-    margin: 0 0 0 240px;
+    margin: 0 0 0 1050px;
 }
 
 #wrapper {
@@ -735,7 +770,6 @@ label {
     height: 200px;
     /* width: 12em; */
     /* width: 300px; */
-    padding: 50px 32px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -974,7 +1008,18 @@ label {
 }
 
 .aoa {
-    margin: 800px 0 0 0;
+    margin: 180px 0 0 0;
+    font-family: Museo Sans Cyrl;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: -0.16px;
+    flex: right;
+    color: #CCC;
+    flex-direction: column;
+    justify-content: center;
+    align-self: stretch;
 }
 
 .techn_p {
@@ -1156,8 +1201,7 @@ label {
     height: 0;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
-    border-top: 6px solid #F4F4F6;
-
+    border-top: 6px solid #7953C3;
     transition: 0.3s;
 }
 
@@ -1364,3 +1408,4 @@ ul li {
     /* 122.222% */
     color: #5D5B66;
 }
+
