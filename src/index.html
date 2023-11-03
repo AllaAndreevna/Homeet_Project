@@ -20,7 +20,7 @@
 
     </header>
     <div class="main_body">
-        <button id="but1">На главную </button>
+        <button id="but1">На главную</button>
         <div class="shapka">
             <div class="shrift_sozd" class="block">Создание профиля</div>
             <div class="osebe" align="bottom">/ О себе</div>
@@ -35,12 +35,12 @@
             <div class="add_f" class="page_block">
                 <div class="avatar_pr">
                     <h class="shrift" id="avatar_centr"><b>Аватар профиля</b></h>
-                    <div>
-                        <!--<input id="file-input" type="file" name="file" multiple>-->
-                        <label id="file-input" class="shrift" style="color: white" А>Загрузить</label>
-                        <!--<input type="file" name="file" multiple>-->
-                    </div>
-                    <p class="osebe" id="shrift_zagruz_ph">Загрузите фотографию весом не более 10 мб</p>
+                    
+                        <div id = "btncentr">
+                            <input type="file" id="real-file"  hidden = "hidden"/>
+                            <button type="button" id="file-input" id="btncentr" onchange="readURL(this);">Загрузить</button>
+                        </div>
+                        <span id="custom-text" class="osebe">Загрузите фотографию весом не более 10 мб</span>
                 </div>
                 <div class="wrapper">
                     <form class="form">
@@ -64,14 +64,8 @@
 
                         </div>
 
-
-                        <!-- <input name="date_of_birth" type="date" class="calend"  placeholder= "Дата рождения"; /> -->
                         <input id="date-input" required="" name="date_of_birth" type="text" class="calend"
                             placeholder="Дата рождения" onfocus="(this.type='date')" />
-
-                        <!-- <p id="resultBday"></p> -->
-                        <!-- <input type="date" name="bday" id="bday" onchange="submitBday()"> -->
-                        <!-- <button onchange="submitBday()" >Calculate</button> -->
 
                         <div class="form__group">
                             <label class="form__label" placeholder="Телеграм">Телеграм
@@ -79,12 +73,14 @@
                             </label>
 
                         </div>
+                        
                         <div class="form__group">
                             <label class="form__label" placeholder="Номер телефона">Номер телефона
                                 <input id="nom_tel" name="nom_tel" class="form__input" placeholder="Номер телефона"
                                     required />
                             </label>
                         </div>
+
                         <div class="form__group">
                             <label class="form__label" placeholder="О себе">О себе</label>
                             <input id="osebe" type="text" name="osebe" class="form__input" placeholder="О себе">
@@ -98,10 +94,9 @@
                                     :)</label>
                             </p>
                         </div>
-                        <!-- <input type="submit" value="submit" name="submit" /> -->
+
                         <button onclick="myFunction(); submitBday();" class="form__button" type="button">Продолжить
                         </button>
-                        <!-- <button onclick="myFunction()"> submit </button> -->
                     </form>
 
                 </div>
@@ -111,8 +106,9 @@
                 <div class="page_block_3">
 
                     <div class="page_block">
+                        <!-- <img id="display-image" src="" /> -->
+                        <img id="blah" src="#" alt="your image" />
                         <img src=".\img\фото мини.svg" alt="someone's_photo" width=" 140" style="margin-bottom: 12px">
-                        <!-- <button class="shrift" class = "pokaz_k">Показать контакты</button> -->
                         <label class="file-input_1" style="margin: 0 0 0 15px">Показать контакты</label>
                     </div>
 
@@ -150,7 +146,12 @@
         <!-- <input type="submit" value="submit" name="submit" /> -->
         <!-- <button type="submit" value="submit" class="form__button">Продолжить</button> -->
     </div>
-    <!-- <script src=".\js\script_1.js"></script> -->
+
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
     <script src="js\script_1.js"></script>
 </body>
@@ -172,6 +173,16 @@
         <div class="black_l_1" class="black_l"> О сервисе</div>
         <div class="black_l_2" class="black_l"> Контакты</div>
         <div class="black_l_3" class="black_l"> Политика конфиденциальности</div>
+
+        <a href="https://t.me/homeetHSE">
+            <ion-icon name="call-sharp"></ion-icon>
+        </a>
+
+        <a href="https://vk.com/ruhomeet">
+            <ion-icon name="logo-vk"></ion-icon>
+        </a>
+
+
         <!-- 
         <div class="social-icons">
             <ul class="nav-menu">
@@ -184,14 +195,19 @@
             </ul>
 
         </div> -->
-        <ul>
+
+
+        <!-- here i was trying to add links.. -->
+        <!-- <ul>
             <li class="telegrammm">
                 <i class="fab fa-telegrammm"></i>
             </li>
             <li class="vkkk">
                 <i class="fab fa-vkkk"></i>
             </li>
-        </ul>
+        </ul> -->
+
+
     </div>
 
 
@@ -201,10 +217,12 @@
     </div>
 
 
-    <div class="osebe" class = "aoa">
-        Предложение не является публичной офертой. Сервис не несет ответственности за действия
-        пользователей,
-        достоверность информации и т.д.</div>
+    <div class="aoa">
+        <p>Предложение не является публичной офертой.</p>
+        <p> Сервис не несет ответственности за действия
+            пользователей,
+            достоверность информации и т.д.</p>
+    </div>
     <h id="podpol">Сделано в бвср</h>
 </footer>
 <div style="height: 12px; background-color: #7953C3;"></div>
