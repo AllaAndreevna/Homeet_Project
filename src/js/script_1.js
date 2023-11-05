@@ -39,6 +39,35 @@ function myFunction() {
 
 //here i'm taking a photo
 
+// window.addEventListener('load', function () {
+//     document.querySelector('input[type="file"]').addEventListener('change', function () {
+//         if (this.files && this.files[0]) {
+//             var img = document.querySelector('img');
+//             img.onload = () => {
+//                 URL.revokeObjectURL(img.src);  // no longer needed, free memory
+//             }
+
+//             img.src = URL.createObjectURL(this.files[0]); // set src to blob url
+//         }
+//     });
+// });
+
+
+
+$("#profileImage0").click(function (e) {
+    $("#imageUpload").click();
+});
+
+function fasterPreview(uploader) {
+    if (uploader.files && uploader.files[0]) {
+        $('#profileImage').attr('src',
+            window.URL.createObjectURL(uploader.files[0]));
+    }
+}
+
+$("#imageUpload").change(function () {
+    fasterPreview(this);
+});
 // const realFileBtn = document.getElementById("real-file");
 // const fileinputBtn = document.getElementById("file-input");
 // const customTxt = document.getElementById("custom-text");
@@ -55,20 +84,20 @@ function myFunction() {
 //     }
 // });
 
-function handleImageUpload() 
-{
+// function handleImageUpload() 
+// {
 
-var image = document.getElementById("real-file").files[0];
+// var image = document.getElementById("real-file").files[0];
 
-    var reader = new FileReader();
+//     var reader = new FileReader();
 
-    reader.onload = function(e) {
-      document.getElementById("display-image").src = e.target.result;
-    }
+//     reader.onload = function(e) {
+//       document.getElementById("display-image").src = e.target.result;
+//     }
 
-    reader.readAsDataURL(image);
+//     reader.readAsDataURL(image);
 
-} 
+// } 
 
 // function readURL(input) {
 //     if (input.files && input.files[0]) {
@@ -136,3 +165,32 @@ formInputs.forEach(input)
     }
 }
 
+
+
+
+
+$(".select1").hover(function () {
+    $(this).siblings(".myOptions1").css("display", "block");
+    $(this).css("background-color", "grey");
+}, function () {
+    $(this).siblings(".myOptions1").css("display", "none");
+});
+$(".myOptions1").hover(function () {
+    $(this).css("display", "block");
+}, function () {
+    $(this).css("display", "none");
+    $(this).siblings(".select1").css("background-color", "#ddd");
+});
+$(".option1").hover(function () {
+    $(this).css("background-color", "#123456");
+}, function () {
+    $(this).css("background-color", "#ddd");
+    var selection = $(this).html();
+    if (selection == $(this).parent().siblings(".select1").html()) $(this).css("background-color", "grey");
+});
+$(".option1").click(function () {
+    var selection = $(this).html();
+    $(this).parent().siblings(".select1").html(selection);
+    $(this).siblings().css("background-color", "#ddd");
+    $(this).css("background-color", "grey");
+});
