@@ -35,13 +35,24 @@
             <div class="add_f" class="page_block">
                 <div class="avatar_pr">
                     <h class="shrift" id="avatar_centr"><b>Аватар профиля</b></h>
-                    
-                        <div id = "btncentr">
-                            <input type="file" id="real-file"  hidden = "hidden"/>
-                            <button type="button" id="file-input" id="btncentr" onchange="readURL(this);">Загрузить</button>
-                        </div>
-                        <span id="custom-text" class="osebe">Загрузите фотографию весом не более 10 мб</span>
+
+                    <div id="btncentr">
+                        <!-- <input type="file" id="real-file" /> -->
+                        <input id="profileImage0" type="file" name="profile_photo" placeholder="Photo"  required=""
+                        capture >
+
+                        
+                        
+                        <button type="button" id="file-input" id="btncentr" onchange="readURL(this);">Загрузить</button>
+                    </div>
+
+                    <span id="custom-text" class="osebe">Загрузите фотографию весом не более 10 мб</span>
                 </div>
+
+
+
+
+
                 <div class="wrapper">
                     <form class="form">
                         <div class="form__group">
@@ -73,7 +84,7 @@
                             </label>
 
                         </div>
-                        
+
                         <div class="form__group">
                             <label class="form__label" placeholder="Номер телефона">Номер телефона
                                 <input id="nom_tel" name="nom_tel" class="form__input" placeholder="Номер телефона"
@@ -106,10 +117,20 @@
                 <div class="page_block_3">
 
                     <div class="page_block">
-                        <!-- <img id="display-image" src="" /> -->
-                        <img id="blah" src="#" alt="your image" />
-                        <img src=".\img\фото мини.svg" alt="someone's_photo" width=" 140" style="margin-bottom: 12px">
-                        <label class="file-input_1" style="margin: 0 0 0 15px">Показать контакты</label>
+                        
+                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+                        <div id="profile-container">
+                            <image id="profileImage" src=".\img\фото мини.svg" alt="someone's_photo" width=" 140"
+                            style="margin-bottom: 12px">
+                        </div>
+
+                        <input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" required=""
+                            capture>
+
+
+                        <!-- <img id="profileImage" src=".\img\фото мини.svg" alt="someone's_photo" width=" 140"
+                            style="margin-bottom: 12px"> -->
+                        <div class="file-input_1" style="margin: 0 0 0 25px">Показать контакты</div>
                     </div>
 
                     <div id="right_side_2" class="page_block" class="block">
@@ -183,34 +204,7 @@
         </a>
 
 
-        <!-- 
-        <div class="social-icons">
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#" class="nav-link"><i class="fab fa-telegram"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link"><i class="fab fa-vk"></i></a>
-                </li>
-            </ul>
-
-        </div> -->
-
-
-        <!-- here i was trying to add links.. -->
-        <!-- <ul>
-            <li class="telegrammm">
-                <i class="fab fa-telegrammm"></i>
-            </li>
-            <li class="vkkk">
-                <i class="fab fa-vkkk"></i>
-            </li>
-        </ul> -->
-
-
     </div>
-
-
 
     <div class="progress-bar">
         <div class="progress-bar-inner"></div>
