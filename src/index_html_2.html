@@ -7,10 +7,14 @@
     <title>Homeet</title>
     <link rel="icon" href=".\img\icon_homeet.PNG" type="image/x-icon">
     <link type="text/css" rel="stylesheet" href=".\css\style.css">
-    <script defer src=".\js\script_1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="js\script_1.js"></script>
 </head>
 
 <body>
+    <script src="js\script_1.js"></script>
     <header class="otst_0">
         <img src=".\img\Слой 2.svg" alt="Logo">
         <button id="but1" class="v_is_akk" style="float:right">Выйти из аккаунта</button>
@@ -42,19 +46,102 @@
                         </div>
 
                     </div>
+
+
                     <div class="form__group">
                         <input class="form__input" placeholder=" ">
                         <label id="name" name="name" class="form__label" placeholder="Имя и фамилия">Курс</label>
                     </div>
-                    
-                    <div class="form__group">
-                        <input name="tg" class="form__input" placeholder=" ">
-                        <label class="form__label" placeholder="Телеграм">Ступень образования</label>
+
+                    <div class="container1"><span class="user1">User 1</span>
+
+                        <div class="selectOptions1">
+                            <div class="myOptions1">
+                                <div class="option volvo1">Volvo</div>
+                                <div class="option saab1">Saab</div>
+                                <div class="option mercedes1">Mercedes</div>
+                                <div class="option audi1">Audi</div>
+                            </div>
+                            <div class="select user1">User 1</div>
+                        </div>
                     </div>
-                    <div class="form__group">
+
+
+                    <select class="select" class="menu" class="dropdown">
+                        <option value="">Ступень образования</option>
+                        <option>Бакалавриат</option>
+                        <option>Специалитет</option>
+                        <option>Магистрант</option>
+                    </select>
+
+
+
+                    <select class="select" class="menu" class="dropdown">
+                        <option value="">Факультет</option>
+                        <option>Московский институт электроники и математики им.А.Н.Тихонова</option>
+                        <option>Факультет математики</option>
+                        <option>Факультет экономических наук</option>
+
+                        <option>Факультет компьютерных наук</option>
+                        <option>Высшая школа бизнеса</option>
+                        <option>Факультет права</option>
+                        <option>Высшая школа юриспруденции и администрирования</option>
+                        <option>Факультет гуманитарных наук</option>
+                        <option>Факультет социальных наук</option>
+                        <option>Факультет креативных индустрий</option>
+                        <option>Факультет мировой экономики и мировой политики</option>
+                        <option>Факультет физики</option>
+                        <option>Международный институт экономики и финансов</option>
+                        <option>Факультет городского и регионального развития</option>
+                        <option>Факультет химии</option>
+                        <option>Факультет биологии и биотехнологии</option>
+                        <option>Факультет географии и геоинформационных технологий</option>
+                        <option>Школа иностранных языков</option>
+                        <option>Институт статистических исследований и экономики знаний</option>
+                        <option>Банковский институт</option>
+                        <option>Школа инноватики и предпринимательства</option>
+
+
+
+                    </select>
+
+
+                    <!-- <div class="dropdown">
+                        <div class="select">
+                            <span class="selected">Факультет</span>
+                            <div class="caret"></div>
+                        </div>
+                        <ul class="menu">
+                            <li class="active">Московский институт электроники и математики им.А.Н.Тихонова</li>
+                            <li>Факультет математики</li>
+                            <li>Факультет экономических наук</li>
+                            <li>Факультет компьютерных наук</li>
+                            <li>Высшая школа бизнеса</li>
+                            <li>Факультет права</li>
+                            <li>Высшая школа юриспруденции и администрирования</li>
+                            <li>Факультет гуманитарных наук</li>
+                            <li>Факультет социальных наук</li>
+                            <li>Факультет креативных индустрий</li>
+                            <li>Факультет мировой экономики и мировой политики</li>
+                            <li>Факультет физики</li>
+                            <li>Международный институт экономики и финансов </li>
+                            <li>Факультет городского и регионального развития</li>
+                            <li>Факультет химии</li>
+                            <li>Факультет биологии и биотехнологии</li>
+                            <li>Факультет географии и геоинформационных технологий</li>
+                            <li>Школа иностранных языков</li>
+                            <li>Институт статистических исследований и экономики знаний</li>
+                            <li>Бмнковский институт</li>
+                            <li>Школа инноватики и предпринимательства</li>
+
+                        </ul>
+                    </div> -->
+
+
+                    <!-- <div class="form__group">
                         <input name="nom_tel" class="form__input" placeholder=" ">
                         <label class="form__label" placeholder="Номер телефона">Факультет</label>
-                    </div>
+                    </div> -->
                     <div class="form__group">
                         <input name="osebe" class="form__input" placeholder=" ">
                         <label class="form__label" placeholder="О себе">Образовательная программа</label>
@@ -63,7 +150,7 @@
                         <input name="osebe" class="form__input" placeholder=" ">
                         <label class="form__label" placeholder="О себе">Работа</label>
                     </div>
-                    
+
 
                 </form>
             </div>
@@ -78,14 +165,19 @@
                     </div>
 
                     <div id="right_side_2" class="page_block" class="block">
-                        <h1 style="font-size: 25px;" class="shrift">Саша Фефелов</h1>
-                        <div class="osebe">
-                            Парень
+                        <h1 class="users_name_letters" id="users_added_name" style="font-size: 25px;" class="shrift">
+                        </h1>
+                        <div class="fill_in">
+                            <h1 id="users_added_gender"> </h1>
                             <img src=".\img\Ellipse 14.svg">
-                            21
-                            год
-                            <p class="osebe">Мне очень нравится устраивать вечеринки, дебоширить и мазать с...</p>
+                            <h1 id="users_added_years"> </h1>
+                            <img src=".\img\Ellipse 14.svg">
+                            <h1 class="empty_field_1"> </h1>
                         </div>
+                        <!-- <p id="users_nom_tel" class = "osebe"> </p> -->
+                        <h1 class="empty_field_2"> </h1>
+                        <p id="users_added_info" class="osebe_input"> </p>
+
                     </div>
                 </div>
 
@@ -95,19 +187,19 @@
                         <div class="rask_osebe">Часто студенты ищут соседей по схожим интересам</div>
                     </div>
 
-                    <div><img src=".\img\292227702065211.png" alt="happy face" height="90px"
-                            width="90px">
+                    <div><img src=".\img\292227702065211.png" alt="happy face" height="90px" width="90px">
                     </div>
 
                 </section>
             </div>
         </section>
-        <button onClick="submit()" class="form__button" class = "form__button_page_2">Продолжить</button>
+        <button onClick="submit()" class="form__button" class="form__button_page_2">Продолжить</button>
     </div>
 
-    <!-- <script src=".\js\script_1.js"></script> -->
-    
 
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="js\script_1.js"></script>
 </body>
 
 
@@ -115,8 +207,7 @@
 
 
 
-
-
+<div class="line_b"></div>
 
 
 <footer class="footer">
@@ -129,26 +220,15 @@
         <div class="black_l_2" class="black_l"> Контакты</div>
         <div class="black_l_3" class="black_l"> Политика конфиденциальности</div>
 
-        <div class="social-icons">
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#" class="nav-link"><i class="fab fa-telegram"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link"><i class="fab fa-vk"></i></a>
-                </li>
-                <!-- <img src=".\img\tg.svg" alt="telegram">
-                <a class="social-icon-telegram" href="https://t.me/homeetHSE" title="TG" target="_blank"
-                        rel="noopener"></a></li> -->
 
-            </ul>
-            <!-- <div>
-                <a class="social-icon-vk" href="https://vk.com/ruhomeet" title="VK" target="_blank" rel="noopener"></a>
+        <a href="https://t.me/homeetHSE">
+            <ion-icon name="call-sharp"></ion-icon>
+        </a>
 
-                <img src=".\img\vk.svg" alt="vk">
-            </div> -->
+        <a href="https://vk.com/ruhomeet">
+            <ion-icon name="logo-vk"></ion-icon>
+        </a>
 
-        </div>
     </div>
 
     <h class="osebe">Предложение не является публичной офертой. Сервис не несет ответственности за действия
@@ -156,8 +236,8 @@
         достоверность информации и т.д.</h>
     <h id="podpol">Сделано в бвср</h>
 
-    
+
 </footer>
-<div style = "height: 12px; background-color: #7953C3;"></div>
+<div style="height: 12px; background-color: #7953C3;"></div>
 
 </html>
