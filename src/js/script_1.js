@@ -39,46 +39,21 @@ function myFunction() {
 
 //here i'm taking a photo
 
-// const realFileBtn = document.getElementById("real-file");
-// const fileinputBtn = document.getElementById("file-input");
-// const customTxt = document.getElementById("custom-text");
 
-// customBtn.addEventListener("click", function(){
-//     realFileBtn.click();
-// });
+$("#profileImage0").click(function (e) {
+    $("#imageUpload").click();
+});
 
-// realFileBtn.addEventListener("change", function() {
-//     if (realfileBtn.value) {
-//         customTxt.innerHTML = realFileBtn.value.match();
-//     } else {
-//         customTxt.innerHTML = "No file chosen yet";
-//     }
-// });
-
-function handleImageUpload() 
-{
-
-var image = document.getElementById("real-file").files[0];
-
-    var reader = new FileReader();
-
-    reader.onload = function(e) {
-      document.getElementById("display-image").src = e.target.result;
+function fasterPreview(uploader) {
+    if (uploader.files && uploader.files[0]) {
+        $('#profileImage').attr('src',
+            window.URL.createObjectURL(uploader.files[0]));
     }
+}
+$("#imageUpload").change(function () {
+    fasterPreview(this);
+});
 
-    reader.readAsDataURL(image);
-
-} 
-
-// function readURL(input) {
-//     if (input.files && input.files[0]) {
-//         var reader = new FileReader();
-//         reader.onload = function (e) {
-//             $('#blah').attr('src', e.target.result).width(150).height(200);
-//         };
-//         reader.readAsDataURL(input.files[0]);
-//     }
-// }
 
 //here i'm getting the age
 
