@@ -39,6 +39,23 @@ function myFunction() {
 
 //here i'm taking a photo
 
+<<<<<<< HEAD
+=======
+// window.addEventListener('load', function () {
+//     document.querySelector('input[type="file"]').addEventListener('change', function () {
+//         if (this.files && this.files[0]) {
+//             var img = document.querySelector('img');
+//             img.onload = () => {
+//                 URL.revokeObjectURL(img.src);  // no longer needed, free memory
+//             }
+
+//             img.src = URL.createObjectURL(this.files[0]); // set src to blob url
+//         }
+//     });
+// });
+
+
+>>>>>>> 90412eee48b11f7a0e768ab245473a5ca82bd156
 
 $("#profileImage0").click(function (e) {
     $("#imageUpload").click();
@@ -50,10 +67,57 @@ function fasterPreview(uploader) {
             window.URL.createObjectURL(uploader.files[0]));
     }
 }
+<<<<<<< HEAD
 $("#imageUpload").change(function () {
     fasterPreview(this);
 });
 
+=======
+
+$("#imageUpload").change(function () {
+    fasterPreview(this);
+});
+// const realFileBtn = document.getElementById("real-file");
+// const fileinputBtn = document.getElementById("file-input");
+// const customTxt = document.getElementById("custom-text");
+
+// customBtn.addEventListener("click", function(){
+//     realFileBtn.click();
+// });
+
+// realFileBtn.addEventListener("change", function() {
+//     if (realfileBtn.value) {
+//         customTxt.innerHTML = realFileBtn.value.match();
+//     } else {
+//         customTxt.innerHTML = "No file chosen yet";
+//     }
+// });
+
+// function handleImageUpload() 
+// {
+
+// var image = document.getElementById("real-file").files[0];
+
+//     var reader = new FileReader();
+
+//     reader.onload = function(e) {
+//       document.getElementById("display-image").src = e.target.result;
+//     }
+
+//     reader.readAsDataURL(image);
+
+// } 
+
+// function readURL(input) {
+//     if (input.files && input.files[0]) {
+//         var reader = new FileReader();
+//         reader.onload = function (e) {
+//             $('#blah').attr('src', e.target.result).width(150).height(200);
+//         };
+//         reader.readAsDataURL(input.files[0]);
+//     }
+// }
+>>>>>>> 90412eee48b11f7a0e768ab245473a5ca82bd156
 
 //here i'm getting the age
 
