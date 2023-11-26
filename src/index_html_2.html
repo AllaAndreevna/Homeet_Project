@@ -22,16 +22,16 @@
     </header>
     <div class="main_body">
         <button id="but1">Назад</button>
+        <br />
 
         <span class="shrift_sozd">Создание профиля</span>
         <span class="osebe"> / Образование</span>
         <br />
         <br />
-        <div class="progress-bar">
-            <div class="progress-bar-inner"></div>
-        </div>
-        
 
+        <div class="progress-bar">
+            <div class="progress-bar-2"></div>
+        </div>
 
         <section id="wrapper">
             <div class="add_f" class="page_block">
@@ -49,25 +49,31 @@
                     </div>
 
 
-                    <div class="form__group">
-                        <input class="form__input" placeholder=" ">
-                        <label id="name" name="name" class="form__label" placeholder="Имя и фамилия">Курс</label>
+                    <span class="labels">Курс</span>
+                    <div class="selector">
+                        <input type="radio" id="number-1" name="number" value="1">
+                        <label for="number-1">1</label>
+                        <input type="radio" id="number-2" name="number" value="2">
+                        <label for="number-2">2</label>
+                        <input type="radio" id="number-3" name="number" value="3">
+                        <label for="number-3">3</label>
+                        <input type="radio" id="number-4" name="number" value="4">
+                        <label for="number-4">4</label>
+                        <input type="radio" id="number-5" name="number" value="5">
+                        <label for="number-5">5</label>
+                        <input type="radio" id="number-6" name="number" value="6">
+                        <label for="number-6">6</label>
                     </div>
+                    <br>
+                    <div id="text_radio1">
+                        <!-- <input type="checkbox" id="check_finished" name="number" value="Уже окончил Вышку"> <label
+                            for="checkbox">Уже окончил Вышку</label> -->
+                        <input type="radio" id="check_finished" name="number" value="Уже окончил Вышку"> <label
+                            for="radio">Уже окончил Вышку</label>
 
-                    <div class="container1"><span class="user1">User 1</span>
-
-                        <div class="selectOptions1">
-                            <div class="myOptions1">
-                                <div class="option volvo1">Volvo</div>
-                                <div class="option saab1">Saab</div>
-                                <div class="option mercedes1">Mercedes</div>
-                                <div class="option audi1">Audi</div>
-                            </div>
-                            <div class="select user1">User 1</div>
-                        </div>
                     </div>
-
-
+                    <br>
+                    <label id="lbl" for="select1" class="labels">Ступень образования</label>
                     <select class="select" class="menu" class="dropdown">
                         <option value="">Ступень образования</option>
                         <option>Бакалавриат</option>
@@ -76,13 +82,12 @@
                     </select>
 
 
-
+                    <label id="lbl" for="select1" class="labels">Факультет</label>
                     <select class="select" class="menu" class="dropdown">
                         <option value="">Факультет</option>
                         <option>Московский институт электроники и математики им.А.Н.Тихонова</option>
                         <option>Факультет математики</option>
                         <option>Факультет экономических наук</option>
-
                         <option>Факультет компьютерных наук</option>
                         <option>Высшая школа бизнеса</option>
                         <option>Факультет права</option>
@@ -107,49 +112,18 @@
                     </select>
 
 
-                    <!-- <div class="dropdown">
-                        <div class="select">
-                            <span class="selected">Факультет</span>
-                            <div class="caret"></div>
-                        </div>
-                        <ul class="menu">
-                            <li class="active">Московский институт электроники и математики им.А.Н.Тихонова</li>
-                            <li>Факультет математики</li>
-                            <li>Факультет экономических наук</li>
-                            <li>Факультет компьютерных наук</li>
-                            <li>Высшая школа бизнеса</li>
-                            <li>Факультет права</li>
-                            <li>Высшая школа юриспруденции и администрирования</li>
-                            <li>Факультет гуманитарных наук</li>
-                            <li>Факультет социальных наук</li>
-                            <li>Факультет креативных индустрий</li>
-                            <li>Факультет мировой экономики и мировой политики</li>
-                            <li>Факультет физики</li>
-                            <li>Международный институт экономики и финансов </li>
-                            <li>Факультет городского и регионального развития</li>
-                            <li>Факультет химии</li>
-                            <li>Факультет биологии и биотехнологии</li>
-                            <li>Факультет географии и геоинформационных технологий</li>
-                            <li>Школа иностранных языков</li>
-                            <li>Институт статистических исследований и экономики знаний</li>
-                            <li>Бмнковский институт</li>
-                            <li>Школа инноватики и предпринимательства</li>
-
-                        </ul>
-                    </div> -->
-
-
-                    <!-- <div class="form__group">
-                        <input name="nom_tel" class="form__input" placeholder=" ">
-                        <label class="form__label" placeholder="Номер телефона">Факультет</label>
-                    </div> -->
-                    <div class="form__group">
-                        <input name="osebe" class="form__input" placeholder=" ">
-                        <label class="form__label" placeholder="О себе">Образовательная программа</label>
+                    <label for="select1" class="labels">Образовательная программа</label>
+                    <div class="search-container">
+                        <input type="text" id="search-input" name="osebe" class="form__input"
+                            placeholder="Образовательная программа">
+                        <i class="fas fa-search"></i>
+                        <label class="form__label" placeholder="О себе"></label>
+                        <!--<i class="fas fa-search"></i> -->
                     </div>
-                    <div class="form__group">
-                        <input name="osebe" class="form__input" placeholder=" ">
-                        <label class="form__label" placeholder="О себе">Работа</label>
+                    <br />
+                    <div class="search-container">
+                        <input id="lbl" name="osebe" class="form__input" placeholder="Работа">
+                        <label class="form__label"></label>
                     </div>
 
 
@@ -192,9 +166,11 @@
                     </div>
 
                 </section>
+                <button onclick="myFunction(); submitBday();" class="form__button" type="button" id="btn">Продолжить
+                </button> 
             </div>
         </section>
-        <button onClick="submit()" class="form__button" class="form__button_page_2">Продолжить</button>
+        <br />
     </div>
 
 
@@ -205,13 +181,17 @@
 
 
 
+<footer class="footer_1">
+    <div class="progress-bar">
+        <div class="progress-bar-inner"></div>
+    </div>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
 
-
-
-<div class="line_b"></div>
-
-
-<footer class="footer">
     <div class="sup_pod">
         <div id="support">Support@homeet.com</div>
         <div class="techn_p">Техническая поддержка</div>
@@ -221,7 +201,6 @@
         <div class="black_l_2" class="black_l"> Контакты</div>
         <div class="black_l_3" class="black_l"> Политика конфиденциальности</div>
 
-
         <a href="https://t.me/homeetHSE">
             <ion-icon name="call-sharp"></ion-icon>
         </a>
@@ -230,19 +209,27 @@
             <ion-icon name="logo-vk"></ion-icon>
         </a>
 
+
     </div>
 
-    <h class="osebe">Предложение не является публичной офертой. Сервис не несет ответственности за действия
-        пользователей,
-        достоверность информации и т.д.</h>
-    <h id="podpol">Сделано в бвср</h>
+    <div class="progress-bar">
+        <div class="progress-bar-inner"></div>
+    </div>
 
-    <<<<<<< HEAD </footer>
-        <div style="height: 12px; background-color: #7953C3;"></div>
-        =======
-        >>>>>>> 90412eee48b11f7a0e768ab245473a5ca82bd156
 
+    <div class="aoa">
+        <p>Предложение не является публичной офертой.</p>
+        <p> Сервис не несет ответственности за действия
+            пользователей,
+            достоверность информации и т.д.</p>
+    </div>
+    <div class="footer_heading">
+        <h id="podpol">Сделано в <b>бвср</b></h>
+    </div>
+    <br />
+    <br />
+    <br />
+    <div style="height: 12px; width: 1240px; background-color: #7953C3;"></div>
 </footer>
-<div style="height: 12px; background-color: #7953C3;"></div>
 
 </html>

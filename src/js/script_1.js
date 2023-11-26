@@ -48,41 +48,7 @@ function myFunction() {
 
 //here i'm taking a photo
 
-// const fileInput = document.getElementById('image_input');
-// const previewImage = document.getElementById('preview_image');
-
-// fileInput.addEventListener('change', function() {
-//   const file = fileInput.files[0];
-//   const reader = new FileReader();
-
-//   reader.addEventListener('load', function() {
-//     // Set the source of the image element to the loaded file
-//     previewImage.src = reader.result;
-//   });
-
-//   if (file) {
-//     // Read the selected file as a data URL
-//     reader.readAsDataURL(file);
-//   }
-// });
-
-// document.getElementById('image_input').addEventListener('change', function (e) {
-//     var file = e.target.files[0];
-//     var reader = new FileReader();
-
-//     reader.onload = function (event) {
-//         var imgSrc = event.target.result;
-//         var previewImg = document.getElementById('preview');
-
-//         // Update the existing attributes with new values
-//         previewImg.src = imgSrc;
-//         previewImg.alt = "Downloaded photo";
-//         previewImg.width = 140;
-//         previewImg.style.marginBottom = "12px";
-//     };
-
-//     reader.readAsDataURL(file);
-// });
+// oh no, i don't know why, but this code works only in html file in <script></script>. i'm sorry :)
 
 
 //here i'm getting the age
@@ -95,4 +61,29 @@ function submitBday() {
     theBday.innerHTML = Q4A;
 }
 
+// here i'm taking form data 
+
+// Получаем значение из поля ввода
+var nameVal = document.getElementById("name").value;
+// Сохраняем значение в local storage
+localStorage.setItem("name", nameVal);
+
+
+// Получаем значение из поля ввода
+var genderVal = document.getElementById("gender").value;
+var paren = document.getElementById('paren');
+    if (document.getElementById('paren').checked) {
+        users_added_gender.innerHTML = paren.value;
+    }
+    if (document.getElementById('devushka').checked) {
+        users_added_gender.innerHTML = devushka.value;
+    }
+// Сохраняем значение в local storage
+localStorage.setItem("myData", inputVal);
+
+
+// Получаем значение из поля ввода
+var inputVal = document.getElementById("myInput").value;
+// Сохраняем значение в local storage
+localStorage.setItem("myData", inputVal);
 

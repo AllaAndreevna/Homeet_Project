@@ -80,6 +80,27 @@
 
 .progress-bar-inner {}
 
+.progress-bar-1 {
+    background-color: #D9D1E0;
+    width: 100%;
+    height: 2px;
+    line-height: 80%;
+    background-color: #D9D1E0;
+    width: 10%;
+    height: 2px;
+    line-height: 80%;
+}
+
+.progress-bar-2 {
+    background-color: #D9D1E0;
+    width: 100%;
+    height: 2px;
+    line-height: 80%;
+    background-color: #D9D1E0;
+    width: 40%;
+    height: 2px;
+    line-height: 80%;
+}
 
 #but1 {
     color: var(--6-b-39-cb-main-purple-hover, #6B39CB);
@@ -282,9 +303,11 @@
 #file_input:hover {
     background-color: #6B39CB;
 }
+
 #btn {
     margin: 450px 0px 0px 450px;
 }
+
 #btncentr {
     display: flex;
     align-items: center;
@@ -430,6 +453,9 @@
 
 }
 
+.clr {
+    color: red;
+}
 
 .form__input {
     display: flex;
@@ -443,6 +469,7 @@
     border-radius: 8px;
     background: #F4F4F6;
     transition: 0.3s;
+    color: red;
 
 }
 
@@ -990,22 +1017,27 @@ label {
 
 .row_item {
     width: 546px;
+    margin: 10px 0 0 0;
 }
 
 .footer {
     width: 1300px;
     margin: 120px 200px 64px 200px;
     margin-left: 0px;
-    /* margin-bottom: 120px; */
     justify-content: center;
     align-items: center;
-    /* display: flex;
-    position: absolute; */
-    /* margin: 0 auto; */
-    /* display: center; */
     justify-content: center;
     align-items: center;
-    /* max-width: 75%; */
+    height: 100%;
+}
+
+.footer_1 {
+    width: 1300px;
+    margin: 120px 200px 64px 200px;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
     height: 100%;
 }
 
@@ -1201,7 +1233,7 @@ label {
     height: 55px;
     margin-left: 25px;
     font-size: 16px;
-    margin: 25px 0 25px 0;
+    margin: 0px 25px 25px 0;
 
 }
 
@@ -1250,7 +1282,6 @@ label {
     position: absolute;
     top: 3em;
     left: 50%;
-    width: 100%;
     transform: translateX(-50%);
     opacity: 0;
     display: none;
@@ -1547,3 +1578,81 @@ ul li {
     color: rgb(134, 131, 131);
 }
 
+.selector {
+    font-family: MuseoSansCyrl300;
+    font-size: 18px;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.selector input {
+    display: none;
+}
+
+.selector label {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+}
+
+.selector input:checked+label {
+    background-color: #7953C3;
+    color: #fff;
+    margin: 8px;
+}
+
+
+.labels {
+    font-family: MuseoSansCyrl300;
+    font-size: 14px;
+    color: #5D5B66;
+    background-color: white;
+    /* H3 */
+    font-family: Museo Sans Cyrl;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    /* 125% */
+    letter-spacing: -0.32px;
+    margin-bottom: 0px;
+}
+
+
+#text_radio1 {
+    font-family: MuseoSansCyrl300;
+    font-size: 16px;
+}
+
+.search-container {
+    position: relative;
+    
+}
+
+#search-input {
+    padding-right: 30px;
+}
+
+.fa-search {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    color: #A1A6B1;
+
+}
+
+/* Подключите FontAwesome, чтобы иконка отображалась */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+#lbl{
+    width: 385px;
+}
