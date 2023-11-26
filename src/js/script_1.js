@@ -1,7 +1,17 @@
 // --------i'm still trying to get data 
-const wrapper = document.querySelector('.wrapper'),
+
+// Make sure the element exists before using querySelector
+const wrapper = document.querySelector('.wrapper');
+if (wrapper) {
     form = wrapper.querySelectorAll(".form"),
-    submitInput = form[0].querySelector('input[type = "submit"]');
+        submitInput = form[0].querySelector('input[type = "submit"]');
+} else {
+    console.error('Cannot find element');
+}
+
+// const wrapper = document.querySelector('.wrapper'),
+// form = wrapper.querySelectorAll(".form"),
+//     submitInput = form[0].querySelector('input[type = "submit"]');
 
 function getDataForm(e) {
     e.preventDefault();
@@ -14,13 +24,12 @@ document.addEventListener('DOMContentLoaded', function () {
 }, false);
 
 function myFunction() {
+    // Make sure the element exists before using querySelector
+    
+
     let name = document.querySelector("#name");
     let users_added_name = document.querySelector("#users_added_name");
     users_added_name.innerHTML = name.value;
-
-    // let nom_tel = document.querySelector("#nom_tel");
-    // let users_nom_tel = document.querySelector("#users_nom_tel");
-    // users_nom_tel.innerHTML = nom_tel.value;
 
     let osebe = document.querySelector("#osebe");
     let users_added_info = document.querySelector("#users_added_info");
@@ -39,85 +48,42 @@ function myFunction() {
 
 //here i'm taking a photo
 
-<<<<<<< HEAD
-=======
-// window.addEventListener('load', function () {
-//     document.querySelector('input[type="file"]').addEventListener('change', function () {
-//         if (this.files && this.files[0]) {
-//             var img = document.querySelector('img');
-//             img.onload = () => {
-//                 URL.revokeObjectURL(img.src);  // no longer needed, free memory
-//             }
+// const fileInput = document.getElementById('image_input');
+// const previewImage = document.getElementById('preview_image');
 
-//             img.src = URL.createObjectURL(this.files[0]); // set src to blob url
-//         }
-//     });
+// fileInput.addEventListener('change', function() {
+//   const file = fileInput.files[0];
+//   const reader = new FileReader();
+
+//   reader.addEventListener('load', function() {
+//     // Set the source of the image element to the loaded file
+//     previewImage.src = reader.result;
+//   });
+
+//   if (file) {
+//     // Read the selected file as a data URL
+//     reader.readAsDataURL(file);
+//   }
 // });
 
-
->>>>>>> 90412eee48b11f7a0e768ab245473a5ca82bd156
-
-$("#profileImage0").click(function (e) {
-    $("#imageUpload").click();
-});
-
-function fasterPreview(uploader) {
-    if (uploader.files && uploader.files[0]) {
-        $('#profileImage').attr('src',
-            window.URL.createObjectURL(uploader.files[0]));
-    }
-}
-<<<<<<< HEAD
-$("#imageUpload").change(function () {
-    fasterPreview(this);
-});
-
-=======
-
-$("#imageUpload").change(function () {
-    fasterPreview(this);
-});
-// const realFileBtn = document.getElementById("real-file");
-// const fileinputBtn = document.getElementById("file-input");
-// const customTxt = document.getElementById("custom-text");
-
-// customBtn.addEventListener("click", function(){
-//     realFileBtn.click();
-// });
-
-// realFileBtn.addEventListener("change", function() {
-//     if (realfileBtn.value) {
-//         customTxt.innerHTML = realFileBtn.value.match();
-//     } else {
-//         customTxt.innerHTML = "No file chosen yet";
-//     }
-// });
-
-// function handleImageUpload() 
-// {
-
-// var image = document.getElementById("real-file").files[0];
-
+// document.getElementById('image_input').addEventListener('change', function (e) {
+//     var file = e.target.files[0];
 //     var reader = new FileReader();
 
-//     reader.onload = function(e) {
-//       document.getElementById("display-image").src = e.target.result;
-//     }
+//     reader.onload = function (event) {
+//         var imgSrc = event.target.result;
+//         var previewImg = document.getElementById('preview');
 
-//     reader.readAsDataURL(image);
+//         // Update the existing attributes with new values
+//         previewImg.src = imgSrc;
+//         previewImg.alt = "Downloaded photo";
+//         previewImg.width = 140;
+//         previewImg.style.marginBottom = "12px";
+//     };
 
-// } 
+//     reader.readAsDataURL(file);
+// });
 
-// function readURL(input) {
-//     if (input.files && input.files[0]) {
-//         var reader = new FileReader();
-//         reader.onload = function (e) {
-//             $('#blah').attr('src', e.target.result).width(150).height(200);
-//         };
-//         reader.readAsDataURL(input.files[0]);
-//     }
-// }
->>>>>>> 90412eee48b11f7a0e768ab245473a5ca82bd156
 
 //here i'm getting the age
 
@@ -130,77 +96,3 @@ function submitBday() {
 }
 
 
-
-// dropdowns
-const dropdowns = document.querySelectorAll('.dropdown');
-dropdowns.forEach(dropdown => {
-    const select = dropdown.querySelector('.select');
-    const caret = dropdown.querySelector('.caret');
-    const menu = dropdown.querySelector('.menu');
-    const options = dropdown.querySelectorAll('.menu li');
-    const selected = dropdown.querySelector('.selected');
-
-    select.addEventListener('click', () => {
-        select.classList.toggle('select-clicked');
-        caret.classList.toggle('caret-rotate');
-        menu.classList.toggle('menu-open');
-    });
-    options.forEach(option => {
-        option.addEventListener('click', () => {
-            selected.innerText = option.innerText;
-            select.classList.remove('select-clicked');
-            caret.classList.remove('caret-rotate');
-            menu.classList.remove('menu-open');
-            options.forEach(option => {
-                option.classList.remove('active');
-            });
-            option.classList.add('active');
-        });
-    });
-});
-
-
-//styling fields
-formInputs.forEach(input)
-{
-    if (input.value == '') {
-        console.log('input empty');
-        input.classList.add('error');
-        let a = "#" + String(input.name) + 'empty';
-        console.log(a);
-        document.querySelector(a).textContent = 'Обязательное поле';
-    }
-    else {
-        input.classList.remove('error');
-    }
-}
-
-
-
-
-
-$(".select1").hover(function () {
-    $(this).siblings(".myOptions1").css("display", "block");
-    $(this).css("background-color", "grey");
-}, function () {
-    $(this).siblings(".myOptions1").css("display", "none");
-});
-$(".myOptions1").hover(function () {
-    $(this).css("display", "block");
-}, function () {
-    $(this).css("display", "none");
-    $(this).siblings(".select1").css("background-color", "#ddd");
-});
-$(".option1").hover(function () {
-    $(this).css("background-color", "#123456");
-}, function () {
-    $(this).css("background-color", "#ddd");
-    var selection = $(this).html();
-    if (selection == $(this).parent().siblings(".select1").html()) $(this).css("background-color", "grey");
-});
-$(".option1").click(function () {
-    var selection = $(this).html();
-    $(this).parent().siblings(".select1").html(selection);
-    $(this).siblings().css("background-color", "#ddd");
-    $(this).css("background-color", "grey");
-});
